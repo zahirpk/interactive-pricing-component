@@ -256,7 +256,7 @@ footer {
     padding-bottom: 2rem;
 }
 
-.myBtnLink {
+a {
     padding: 1rem 1.5rem;
     background-color: var(--Dark-Desaturated-Blue);
     border: none;
@@ -265,7 +265,7 @@ footer {
     text-decoration: none;
 }
 
-.myBtnLink:hover {
+a:hover {
     cursor: pointer;
     color: white;
 }
