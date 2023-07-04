@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="circle">
+      <img src="images/pattern-circles.svg" alt="">
+      <div class="top_heading">
+        <h1> Simple, traffic-based pricing</h1>
+        <p id="sign_up"> Sign-up for our 30-day <span id="title_description"> No credit card required. </span></p>
+      </div>
+    </div>
+  </header>
+  <main class="flex-container">
+    <h3 id="pageViews_text">100k Pageviews</h3>
+
+
+    <div class="slider">
+      <input type="range" min="0" max="40" step="8" id="rangeSlider" list="custom-values">
+      <datalist id="custom-values">
+        <option value="8">
+        <option value="16">
+        <option value="24">
+        <option value="32">
+        <option value="40">
+      </datalist>
+      <p class="progress" id="progressSlider"></p>
+    </div>
+    <div class="bill-figure" id="sliderValue">$16 <span>/month</span></div>
+    <div class="duration">
+      <p> Monthly Billing</p>
+      <div class="myBtn"><input type="checkbox" id="toggle-button">
+        <label for="toggle-button"></label>
+      </div>
+      <div>Yearly Billing <span id="twenty_five">- 25% <span id="discount">discount</span></span></div>
+    </div>
+    <hr>
+    <footer>
+      <div class="feartures">
+        <div class="icon"><img src="images/icon-check.svg" alt="tick-svg"><span>Unlimited websites</span></div>
+        <div class="icon"><img src="images/icon-check.svg" alt="tick-svg"><span> 100% data ownership</span></div>
+        <div class="icon"><img src="images/icon-check.svg" alt="tick-svg"><span> Email reports</span></div>
+      </div>
+      <div class="btn">
+
+        <a href="#" class="myBtnLink">Start free trial</a>
+      </div>
+
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --Soft-Cyan: hsl(174, 77%, 80%);
+    /* (Full Slider Bar) */
+    --Strong-Cyan: hsl(174, 86%, 45%);
+    /* (Slider Backround) */
+    --Light-Grayish-Red: hsl(14, 92%, 95%);
+    /*  (Discount Background)*/
+    --Light-Red: hsl(15, 100%, 70%);
+    /* (Discount Text) */
+    --Pale-Blue: hsl(226, 100%, 87%);
+    /* (CTA Text) */
+    --White: hsl (0, 0%, 100%);
+    /* (Pricing Component Background) */
+    --Very-Pale-Blue: hsl(230, 100%, 99%);
+    /* (Main Background) */
+    --Light-Grayish-Blue: hsl(224, 65%, 95%);
+    /* (Empty Slider Bar) */
+    --Light-Grayish-Blue: hsl(223, 50%, 87%);
+    /*  (Toggle Background) */
+    --Grayish-Blue: hsl(225, 20%, 60%);
+    /* (Text) */
+    --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+    /* (Text & CTA Background) */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    /* 800 */
+    width: 100vw;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url(images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    height: 60vh;
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.circle {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.top_heading {
+    position: relative;
+    top: -120px;
+}
+
+h1 {
+    font-size: 1.25em;
+    font-weight: 800;
+}
+
+#sign_up {
+    font-size: 1em;
+    padding-top: 1rem;
+    color: var(--Grayish-Blue);
+}
+
+#title_description {
+    display: block;
+    font-size: 0.85em;
+    padding-top: 0.25rem;
+}
+
+#pageViews_text {
+    color: var(--Light-Grayish-Blue);
+    font-weight: 600;
+}
+
+.flex-container {
+    margin: 0rem 1.5rem;
+    position: relative;
+    top: -120px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: -1px 7px 19px -7px rgba(34, 34, 68, 0.75);
+    -webkit-box-shadow: -1px 7px 19px -7px rgba(34, 34, 68, 0.75);
+    -moz-box-shadow: -1px 7px 19px -7px rgba(34, 34, 68, 0.75);
+}
+
+h3 {
+    padding: 1.5rem 0rem;
+    letter-spacing: 2px;
+}
+
+.slider {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider input {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--Light-Grayish-Blue);
+    position: relative;
+    border-radius: 50px;
+}
+
+.slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--Strong-Cyan);
+    position: relative;
+    top: -6px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.slider input::-webkit-slider-thumb:hover {
+    box-shadow: 0px 15px 16px 11px rgba(16, 213, 194, 0.28);
+    -webkit-box-shadow: 0px 15px 16px 11px rgba(16, 213, 194, 0.28);
+    -moz-box-shadow: 0px 15px 16px 11px rgba(16, 213, 194, 0.28);
+}
+
+.progress {
+    width: 0;
+    height: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+/*  */
+.bill-figure {
+    padding: 2rem 0rem;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.bill-figure span {
+    font-size: 0.5em;
+    position: relative;
+    bottom: 10px;
+    color: var(--Grayish-Blue);
+}
+
+.duration {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 0rem;
+    color: var(--Grayish-Blue);
+    font-size: 0.85em;
+}
+
+#discount {
+    display: none;
+}
+
+.myBtn {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* light and dark mood button */
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 45px;
+    height: 20px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50px;
+}
+
+label:before {
+    content: '';
+    position: relative;
+    left: 1px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 18px;
+    height: 17px;
+    border-radius: 50px;
+    transition: transform 0.5s ease;
+}
+
+input[type="checkbox"]:checked+label:before {
+    transform: translateX(25.5px);
+    background-color: white;
+    transition-delay: 0.1s;
+}
+
+input[type="checkbox"]:checked+label {
+    background-color: var(--Strong-Cyan);
+}
+
+/* Button end  */
+#twenty_five {
+    background-color: var(--Light-Grayish-Red);
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.75em;
+    color: var(--Light-Red);
+}
+
+footer {
+    padding: 2rem 0rem;
+}
+
+.icon {
+    padding: 0.25rem;
+    color: rgb(132, 128, 128);
+    font-weight: 600;
+}
+
+.icon img {
+    margin-right: 0.5rem;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.myBtnLink {
+    padding: 1rem 1.5rem;
+    background-color: var(--Dark-Desaturated-Blue);
+    border: none;
+    border-radius: 50px;
+    color: var(--Grayish-Blue);
+    text-decoration: none;
+}
+
+.myBtnLink:hover {
+    cursor: pointer;
+    color: white;
+}
+
+@media(min-width:90em) {
+    body {
+        background-color: var(--Very-Pale-Blue);
+    }
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 800;
+    }
+
+    #sign_up {
+        font-size: 1.65em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .flex-container {
+        width: 45vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        border-radius: 15px;
+    }
+
+    #pageViews_text {
+        text-align: left;
+        margin-left: 3rem;
+        font-size: 1.5em;
+        padding-top: 3.5rem;
+    }
+
+    .bill-figure {
+        padding-top: 3.8rem;
+        position: absolute;
+        right: 0;
+        top: -10px;
+        margin-right: 3rem;
+    }
+
+    .slider {
+        margin-top: 2rem;
+        width: 85%;
+    }
+
+    .duration {
+        justify-content: flex-end;
+        margin-right: 4rem;
+    }
+
+    #discount {
+        display: inline-block;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .feartures {
+        text-align: left;
+    }
+}
